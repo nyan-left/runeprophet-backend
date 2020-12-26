@@ -1,13 +1,7 @@
 import pandas as pd
 from fbprophet import Prophet
-from fbprophet.plot import plot_plotly, plot_components_plotly
-from fastapi import Request, FastAPI
 import json
-from typing import Any, Dict, AnyStr, List, Union
 
-JSONObject = Dict[AnyStr, Any]
-JSONArray = List[Any]
-JSONStructure = Union[JSONArray, JSONObject]
 
 async def predict(event, context):
     df = pd.DataFrame(json.loads(event['body']))
