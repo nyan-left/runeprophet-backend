@@ -1,0 +1,17 @@
+org: serverlessinc
+app: aws-python-rest-api
+service: aws-python-rest-api
+
+provider:
+  name: aws
+  egion: eu-west-1
+  runtime: python3.8
+
+functions:
+  hello:
+    handler: src/router.predict
+    events:
+      - http:
+          path: predict
+          method: post
+          cors: true
