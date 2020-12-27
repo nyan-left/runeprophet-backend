@@ -13,8 +13,11 @@ provider:
   #   ttlInSeconds: 300 # defaults to the maximum allowed: 3600
 custom:
   pythonRequirements:
+    noDeploy:
+    - matplotlib
     dockerizePip: non-linux
     slim: true
+    zip: true
     layer : true
     slimPatterns:
       - '**/tests/*'
