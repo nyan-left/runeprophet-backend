@@ -24,6 +24,7 @@ package:
     - package.json
     - package-log.json
     - node_modules/**
+    - venv/**
 
 functions:
   hello:
