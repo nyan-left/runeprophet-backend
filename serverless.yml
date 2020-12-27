@@ -24,10 +24,13 @@ custom:
 package:
   individually: false
   exclude:
-    - package.json
-    - package-log.json
-    - node_modules/**
+   - node_modules/**
+    - env/**
     - venv/**
+    - README.md
+    - package.json
+    - package-lock.json
+    - requirements.txt
 
 functions:
   hello:
