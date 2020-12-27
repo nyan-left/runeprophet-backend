@@ -4,6 +4,9 @@ provider:
   name: aws
   region: eu-west-2
   runtime: python3.8
+  apiGateway:
+    shouldStartNameWithService: true
+    
 
   # apiGatewayCaching:
   #   enabled: true
