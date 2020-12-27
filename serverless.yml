@@ -5,12 +5,13 @@ provider:
   region: eu-west-2
   runtime: python3.8
 
-custom:
   # apiGatewayCaching:
   #   enabled: true
   #   ttlInSeconds: 300 # defaults to the maximum allowed: 3600
+custom:
   pythonRequirements:
-    dockerizePip: true
+    dockerizePip: non-linux
+
 
 package:
   individually: false
