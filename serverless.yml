@@ -4,7 +4,7 @@ service: aws-python-rest-api
 
 provider:
   name: aws
-  egion: eu-west-1
+  region: eu-west-2
   runtime: python3.8
 
 functions:
