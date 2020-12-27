@@ -9,17 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8]
         node-version: [14.x]
     steps:
       - uses: actions/checkout@master
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python 3.8
         uses: actions/setup-python@v2
         with:
-          python-version: ${{ matrix.python-version }}
-      # You can test your matrix by printing the current Python version
-      - name: Display Python version
-        run: python -c "import sys; print(sys.version)"
+         python-version: '3.8'
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
