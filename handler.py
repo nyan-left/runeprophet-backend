@@ -1,3 +1,7 @@
+try:
+  import unzip_requirements
+except ImportError:
+  pass
 import pandas as pd
 from fbprophet import Prophet
 import json

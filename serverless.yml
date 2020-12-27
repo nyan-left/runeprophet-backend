@@ -16,6 +16,9 @@ custom:
     dockerizePip: non-linux
     slim: true
     layer : true
+    zip: true
+    noDeploy:
+      - matplotlib
 
 
 package:
