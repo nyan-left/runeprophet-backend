@@ -16,22 +16,19 @@ custom:
     dockerizePip: non-linux
     slim: true
     layer : true
-    zip: true
-    noDeploy:
-      - matplotlib
+    slimPatterns:
+      - '**/tests/*'
+      - '**/__pycache__*'
+      - "**/stan/src/*"
+      - "**/stan/lib/stan_math/lib/*"
 
 
 package:
   individually: false
   exclude:
-   - node_modules/**
-   - env/**
-   - venv/**
-   - .virtualenv/**
-   - README.md
-   - package.json
-   - package-lock.json
-   - requirements.txt
+    - package.json
+    - package-log.json
+    - node_modules/**
 
 functions:
   hello:
@@ -45,3 +42,4 @@ functions:
 
 plugins:
   - serverless-python-requirements
+  # - serverless-api-gateway-caching
