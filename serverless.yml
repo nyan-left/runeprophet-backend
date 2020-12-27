@@ -1,17 +1,30 @@
-org: serverlessinc
-app: aws-python-rest-api
-service: aws-python-rest-api
+service: aws-python-prophet-rest-api
 
 provider:
   name: aws
   region: eu-west-2
   runtime: python3.8
 
+custom:
+  pythonRequirements:
+    dockerizePip: true
+
+package:
+  individually: false
+  exclude:
+    - package.json
+    - package-log.json
+    - node_modules/**
+
 functions:
   hello:
-    handler: src/router.predict
+    handler: handler.predict
     events:
       - http:
           path: predict
           method: post
           cors: true
+
+
+plugins:
+  - serverless-python-requirements

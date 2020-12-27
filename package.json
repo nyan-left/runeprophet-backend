@@ -1,0 +1,13 @@
+{
+  "name": "runeprophet-lambda-api",
+  "description": "",
+  "version": "0.0.0",
+  "dependencies": {},
+  "scripts": {
+    "deploy": "serverless deploy"
+  },
+  "devDependencies": {
+    "serverless": "^1.67.0",
+    "serverless-python-requirements": "^5.1.0"
+  }
+}
