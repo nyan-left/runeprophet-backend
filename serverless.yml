@@ -25,12 +25,13 @@ package:
   individually: false
   exclude:
    - node_modules/**
-    - env/**
-    - venv/**
-    - README.md
-    - package.json
-    - package-lock.json
-    - requirements.txt
+   - env/**
+   - venv/**
+   - .virtualenv/**
+   - README.md
+   - package.json
+   - package-lock.json
+   - requirements.txt
 
 functions:
   hello:
