@@ -30,7 +30,7 @@ jobs:
           aws-region: eu-west-2
       - name: Install pipenv
         run: |
-          python -m pip install --upgrade pipenv wheel numpy pandas
+          python -m pip install --upgrade pipenv wheel numpy pandas convertdate
 
       - id: cache-pipenv
         uses: actions/cache@v1
