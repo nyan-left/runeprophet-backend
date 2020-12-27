@@ -7,7 +7,8 @@ from fbprophet import Prophet
 import json
 
 async def predict(event, context):
-    df = pd.DataFrame(json.loads(event['body']))
+    data = json.loads(event['body'])
+    df = pd.DataFrame(data)
     df.head()
     m = Prophet()
     m.fit(df)
