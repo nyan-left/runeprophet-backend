@@ -36,12 +36,12 @@ jobs:
           pip install fbprophet
       - name: deploy
         run: npm run-script deploy
-      - name : Artifact
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: artifact
-          path: ./
+      # - name : Artifact
+      #   if: always()
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: artifact
+      #     path: ./
       
 # pip install wheel==0.36.2
 # pip install appdirs==1.4.4
