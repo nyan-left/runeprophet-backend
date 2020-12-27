@@ -36,7 +36,7 @@ jobs:
           pip install fbprophet
           npm run-script deploy
       - name : Artifact
-      - uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v2
         with:
           name: artifact
           path: ./
