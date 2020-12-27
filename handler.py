@@ -15,9 +15,9 @@ async def predict(event, context):
     future.tail()
     forecast = m.predict(future)
     forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail()
-    json = forecast.to_json(orient='records', date_format='iso')
+    jsonResponse = forecast.to_json(orient='records', date_format='iso')
     response = {
         "statusCode": 200,
-        "body": json
+        "body": jsonResponse
     }
     return response
