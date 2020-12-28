@@ -1,15 +1,13 @@
 import os
 os.environ[ 'MPLCONFIGDIR' ] = '/tmp/'
-
-if os.environ.get("AWS_EXECUTION_ENV") is not None:
-  try:
+try:
+  if os.environ.get("AWS_EXECUTION_ENV") is not None:
     import unzip_requirements
-  except ImportError:
-    pass
-  
-import pandas as pd
-from fbprophet import Prophet
-import json
+  import pandas as pd
+  from fbprophet import Prophet
+  import json
+except(Exception):
+  pass
 
 def predict(event, context):
   try:
