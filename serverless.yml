@@ -1,4 +1,4 @@
-service: ${self:provider.stage}-${self:service}-predict
+service: runeprophet-${self:provider.stage}-predict
 
 provider:
   name: aws
