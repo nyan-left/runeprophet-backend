@@ -9,7 +9,7 @@ import pandas as pd
 from fbprophet import Prophet
 import json
 
-async def predict(event, context):
+def predict(event, context):
     data = json.loads(event['body'])
     df = pd.DataFrame(data)
     df.head()
