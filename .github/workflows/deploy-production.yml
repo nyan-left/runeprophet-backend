@@ -33,10 +33,10 @@ jobs:
           python -m pip install --upgrade pipenv wheel numpy pandas fbprophet pipenv
       - name: deploy
         run: npm run-script deploy:production
-      # - name : Artifact
-      #   if: always()
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: artifact
-      #     path: ./
+      - name : Artifact
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifact
+          path: ./
       
