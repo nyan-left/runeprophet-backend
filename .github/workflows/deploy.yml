@@ -31,7 +31,6 @@ jobs:
       - name: Install pipenv
         run: |
           python -m pip install --upgrade pipenv wheel numpy pandas fbprophet
-
       - id: cache-pipenv
         uses: actions/cache@v1
         with:
