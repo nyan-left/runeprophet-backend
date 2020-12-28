@@ -3,10 +3,13 @@
   "description": "",
   "version": "0.0.0",
   "scripts": {
-    "deploy": "serverless deploy"
+    "deploy": "serverless deploy",
+    "start": "serverless offline start",
+    "prestart": "node fix-sls-offline.js"
   },
   "devDependencies": {
     "serverless": "^2.16.1",
+    "serverless-offline-python": "^3.22.2",
     "serverless-python-requirements": "^5.1.0"
   }
 }
