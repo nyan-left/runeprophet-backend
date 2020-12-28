@@ -1,7 +1,10 @@
-try:
-  import unzip_requirements
-except ImportError:
-  pass
+import os
+if os.environ.get("AWS_EXECUTION_ENV") is not None:
+  try:
+    import unzip_requirements
+  except ImportError:
+    pass
+  
 import pandas as pd
 from fbprophet import Prophet
 import json
