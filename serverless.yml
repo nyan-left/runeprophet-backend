@@ -1,9 +1,10 @@
-service: aws-python-prophet-rest-api
+service: runeprophet-api
 
 provider:
-  name: aws
+  name: ${self:provider.stage}-${self:service}-predict
   region: eu-west-2
   runtime: python3.8
+  stage: ${opt:stage, 'develop'}
   apiGateway:
     shouldStartNameWithService: true
     
