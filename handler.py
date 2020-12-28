@@ -15,7 +15,7 @@ def predict(event, context):
     df.head()
     m = Prophet()
     m.fit(df)
-    future = m.make_future_dataframe(periods=10)
+    future = m.make_future_dataframe(periods=30)
     future.tail()
     forecast = m.predict(future)
     forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail()
