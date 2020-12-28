@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "deploy:production": "serverless deploy -- stage prod",
-    "deploy:staging": "serverless deploy --stage develop",
+    "deploy:develop": "serverless deploy --stage develop",
     "start": "serverless offline start "
   },
   "devDependencies": {
