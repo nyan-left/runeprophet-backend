@@ -1,7 +1,7 @@
-service: runeprophet-api
+service: runeprophet-${self:provider.stage}-predict
 
 provider:
-  name: ${self:provider.stage}-${self:service}-predict
+  name: aws
   region: eu-west-2
   runtime: python3.8
   stage: ${opt:stage, 'develop'}
@@ -12,6 +12,7 @@ provider:
   # apiGatewayCaching:
   #   enabled: true
   #   ttlInSeconds: 300 # defaults to the maximum allowed: 3600
+
 custom:
   pythonRequirements:
     noDeploy:
@@ -36,6 +37,7 @@ package:
 
 functions:
   hello:
+    timeout: 30
     handler: handler.predict
     events:
       - http:
