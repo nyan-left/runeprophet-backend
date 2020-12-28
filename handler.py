@@ -1,4 +1,6 @@
 import os
+os.environ[ 'MPLCONFIGDIR' ] = '/tmp/'
+
 if os.environ.get("AWS_EXECUTION_ENV") is not None:
   try:
     import unzip_requirements
@@ -10,6 +12,7 @@ from fbprophet import Prophet
 import json
 
 def predict(event, context):
+  try:
     data = json.loads(event['body'])
     df = pd.DataFrame(data)
     df.head()
@@ -20,8 +23,27 @@ def predict(event, context):
     forecast = m.predict(future)
     forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail()
     jsonResponse = forecast.to_json(orient='records', date_format='iso')
+    print('Trying to return a response')
+    print(jsonResponse[0:30])
     response = {
         "statusCode": 200,
         "body": jsonResponse
     }
     return response
+  except Exception:
+    pass
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
