@@ -12,6 +12,7 @@ provider:
   # apiGatewayCaching:
   #   enabled: true
   #   ttlInSeconds: 300 # defaults to the maximum allowed: 3600
+configValidationMode: warn
 custom:
   pythonRequirements:
     noDeploy:
